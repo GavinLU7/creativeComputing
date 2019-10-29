@@ -2,6 +2,7 @@ sum1 = 0
 num = 0
 count = 0
 symbol = ''
+list1 = []
 while num != '':
         num = float(num)
         sum1 += num
@@ -20,16 +21,24 @@ while num != '':
         isnum = False
         while not isnum  and num != '':
                 preventError = num
-                preventError = list(preventError)
-                if num.find('-') == 0 :
+                
+                if preventError.find('-') == 0 :
+                        preventError = list(preventError)
                         preventError.remove('-')
-                if num.find('.') > 0 :
+                        preventError = ''.join(preventError)
+                if preventError.find('.') > 0 :
+                        preventError = list(preventError)
                         preventError.remove('.')
-                preventError = ''.join(preventError)
+                        preventError = ''.join(preventError)
                 isnum = preventError.isnumeric()
 		
                 if not isnum:
-                        num = input('Please input correct the number: ')         
+                        num = input('You enter wrong number form!\nPlease input the '+ str(count) + symbol + ' number: ')
+        if num != '':
+                list1.append(float(num))
 		
-print('Your input', count-1, 'numbers')	
-print('sum of numbers:',sum1)
+print('Your input', len(list1), 'numbers')
+print(list1)
+print('sum of numbers:%.3f'%sum(list1))
+print('Average of numbers:%.3f'%(sum(list1)/len(list1)))
+
