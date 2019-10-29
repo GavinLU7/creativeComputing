@@ -15,7 +15,7 @@ while num != '':
         elif count % 10 == 2:
                 symbol = 'nd'
         else:
-                symbol == 'rd'
+                symbol = 'rd'
         num = input('Please input the '+ str(count) + symbol + ' number: ')
         isnum = False
         while not isnum  and num != '':
