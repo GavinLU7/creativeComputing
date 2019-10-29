@@ -5,9 +5,7 @@ list1 = []
 while num != '':
         num = float(num)
         count += 1
-        if count // 10 == 1 or count % 10 > 3:
-                symbol = 'th'
-        elif count % 10 == 0:
+        if count // 10 == 1 or count % 10 > 3 or count % 10 == 0:
                 symbol = 'th'
         elif count % 10 == 1:
                 symbol = 'st'
