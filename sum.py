@@ -1,11 +1,9 @@
-sum1 = 0
 num = 0
 count = 0
 symbol = ''
 list1 = []
 while num != '':
         num = float(num)
-        sum1 += num
         count += 1
         if count // 10 == 1 or count % 10 > 3:
                 symbol = 'th'
